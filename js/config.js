@@ -128,7 +128,7 @@ Vote in the poll below to help shape the next update! Sleep timer, custom playli
   links: {
     github: "https://github.com/aditys4444/Surmio-Music-app",       // [EDITABLE PLACEHOLDER]
     telegram: "https://telegram.me/+n5uBAsCDeYUyMjg1",                       // [EDITABLE PLACEHOLDER]
-    supportEmail: "support@surmio.app",                         // [EDITABLE PLACEHOLDER]
+    supportEmail: "support@surmiomusic.online",                         // [EDITABLE PLACEHOLDER]
     docs: "#faq"
   },
 
