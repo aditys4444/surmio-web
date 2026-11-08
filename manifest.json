@@ -1,0 +1,19 @@
+{
+  "name": "Surmio Music Player",
+  "short_name": "Surmio",
+  "description": "A thoughtfully designed music player with true background playback, synchronized lyrics, a 10-band equalizer, and offline audio downloads.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#07080D",
+  "theme_color": "#07080D",
+  "icons": [
+    {
+      "src": "assets/icons/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+

@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="eqBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E101E"/>
+      <stop offset="100%" stop-color="#080911"/>
+    </linearGradient>
+    <linearGradient id="eqSliderGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="eqGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#06B6D4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="480" rx="20" fill="url(#eqBg)" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Header -->
+  <g transform="translate(30, 30)">
+    <rect width="32" height="32" rx="8" fill="#8B5CF6" opacity="0.2"/>
+    <text x="16" y="22" fill="#A78BFA" font-family="system-ui, sans-serif" font-size="14" font-weight="800" text-anchor="middle">EQ</text>
+    <text x="46" y="22" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="800">10-Band Parametric Equalizer &amp; DSP Engine</text>
+    <text x="46" y="40" fill="#64748B" font-family="system-ui, sans-serif" font-size="12">Direct 64-bit Floating-Point Convolution • +/- 15 dB Gain Curve</text>
+  </g>
+
+  <!-- Preset Selector Pills -->
+  <g transform="translate(480, 35)">
+    <rect x="0" y="0" width="80" height="28" rx="14" fill="#8B5CF6"/>
+    <text x="40" y="18" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Audiophile</text>
+
+    <rect x="90" y="0" width="80" height="28" rx="14" fill="#171A2C" stroke="#334155" stroke-width="1"/>
+    <text x="130" y="18" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Bass Boost</text>
+
+    <rect x="180" y="0" width="80" height="28" rx="14" fill="#171A2C" stroke="#334155" stroke-width="1"/>
+    <text x="220" y="18" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Vocal Pop</text>
+  </g>
+
+  <!-- Frequency Curve Display Canvas Background -->
+  <g transform="translate(40, 100)">
+    <rect width="720" height="140" rx="12" fill="#121526" stroke="#1E293B" stroke-width="1"/>
+    
+    <!-- Grid lines -->
+    <line x1="0" y1="35" x2="720" y2="35" stroke="rgba(255,255,255,0.04)" stroke-dasharray="4 4"/>
+    <line x1="0" y1="70" x2="720" y2="70" stroke="rgba(255,255,255,0.08)"/>
+    <line x1="0" y1="105" x2="720" y2="105" stroke="rgba(255,255,255,0.04)" stroke-dasharray="4 4"/>
+
+    <text x="10" y="24" fill="#64748B" font-family="system-ui, sans-serif" font-size="9">+12 dB</text>
+    <text x="10" y="73" fill="#64748B" font-family="system-ui, sans-serif" font-size="9">0 dB</text>
+    <text x="10" y="125" fill="#64748B" font-family="system-ui, sans-serif" font-size="9">-12 dB</text>
+
+    <!-- Smooth Spline Curve -->
+    <path d="M 30 70 C 80 40, 120 30, 170 50 C 230 75, 290 85, 360 70 C 430 55, 490 25, 560 40 C 620 52, 660 65, 700 68" 
+          fill="none" stroke="url(#eqSliderGrad)" stroke-width="3" filter="url(#eqGlow)"/>
+    <!-- Area under curve fill -->
+    <path d="M 30 70 C 80 40, 120 30, 170 50 C 230 75, 290 85, 360 70 C 430 55, 490 25, 560 40 C 620 52, 660 65, 700 68 L 700 140 L 30 140 Z" 
+          fill="url(#eqSliderGrad)" opacity="0.1"/>
+  </g>
+
+  <!-- 10 Sliders Container -->
+  <g transform="translate(60, 270)">
+    <!-- Band 1: 31 Hz -->
+    <g transform="translate(0, 0)">
+      <rect x="18" y="0" width="4" height="130" rx="2" fill="#1E293B"/>
+      <rect x="18" y="30" width="4" height="100" rx="2" fill="url(#eqSliderGrad)"/>
+      <circle cx="20" cy="30" r="10" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="20" y="152" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">31 Hz</text>
+      <text x="20" y="165" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">+4.5</text>
+    </g>
+
+    <!-- Band 2: 63 Hz -->
+    <g transform="translate(70, 0)">
+      <rect x="18" y="0" width="4" height="130" rx="2" fill="#1E293B"/>
+      <rect x="18" y="20" width="4" height="110" rx="2" fill="url(#eqSliderGrad)"/>
+      <circle cx="20" cy="20" r="10" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="20" y="152" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">63 Hz</text>
+      <text x="20" y="165" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">+6.0</text>
+    </g>
+
+    <!-- Band 3: 125 Hz -->
+    <g transform="translate(140, 0)">
+      <rect x="18" y="0" width="4" height="130" rx="2" fill="#1E293B"/>
+      <rect x="18" y="45" width="4" height="85" rx="2" fill="url(#eqSliderGrad)"/>
+      <circle cx="20" cy="45" r="10" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="20" y="152" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">125 Hz</text>
+      <text x="20" y="165" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">+2.5</text>
+    </g>
+
+    <!-- Band 4: 250 Hz -->
+    <g transform="translate(210, 0)">
+      <rect x="18" y="0" width="4" height="130" rx="2" fill="#1E293B"/>
+      <rect x="18" y="65" width="4" height="65" rx="2" fill="url(#eqSliderGrad)"/>
+      <circle cx="20" cy="65" r="10" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="20" y="152" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">250 Hz</text>
+      <text x="20" y="165" fill="#A78BFA" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">0.0</text>
+    </g>
+
+    <!-- Band 5: 500 Hz -->
+    <g transform="translate(280, 0)">
+      <rect x="18" y="0" width="4" height="130" rx="2" fill="#1E293B"/>
+      <rect x="18" y="75" width="4" height="55" rx="2" fill="url(#eqSliderGrad)"/>
+      <circle cx="20" cy="75" r="10" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="20" y="152" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">500 Hz</text>
+      <text x="20" y="165" fill="#A78BFA" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">-1.5</text>
+    </g>
+
+    <!-- Band 6: 1 kHz -->
+    <g transform="translate(350, 0)">
+      <rect x="18" y="0" width="4" height="130" rx="2" fill="#1E293B"/>
+      <rect x="18" y="65" width="4" height="65" rx="2" fill="url(#eqSliderGrad)"/>
+      <circle cx="20" cy="65" r="10" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="20" y="152" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">1 kHz</text>
+      <text x="20" y="165" fill="#A78BFA" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">0.0</text>
+    </g>
+
+    <!-- Band 7: 2 kHz -->
+    <g transform="translate(420, 0)">
+      <rect x="18" y="0" width="4" height="130" rx="2" fill="#1E293B"/>
+      <rect x="18" y="50" width="4" height="80" rx="2" fill="url(#eqSliderGrad)"/>
+      <circle cx="20" cy="50" r="10" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="20" y="152" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">2 kHz</text>
+      <text x="20" y="165" fill="#A78BFA" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">+1.8</text>
+    </g>
+
+    <!-- Band 8: 4 kHz -->
+    <g transform="translate(490, 0)">
+      <rect x="18" y="0" width="4" height="130" rx="2" fill="#1E293B"/>
+      <rect x="18" y="35" width="4" height="95" rx="2" fill="url(#eqSliderGrad)"/>
+      <circle cx="20" cy="35" r="10" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="20" y="152" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">4 kHz</text>
+      <text x="20" y="165" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">+3.5</text>
+    </g>
+
+    <!-- Band 9: 8 kHz -->
+    <g transform="translate(560, 0)">
+      <rect x="18" y="0" width="4" height="130" rx="2" fill="#1E293B"/>
+      <rect x="18" y="25" width="4" height="105" rx="2" fill="url(#eqSliderGrad)"/>
+      <circle cx="20" cy="25" r="10" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="20" y="152" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">8 kHz</text>
+      <text x="20" y="165" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">+5.2</text>
+    </g>
+
+    <!-- Band 10: 16 kHz -->
+    <g transform="translate(630, 0)">
+      <rect x="18" y="0" width="4" height="130" rx="2" fill="#1E293B"/>
+      <rect x="18" y="40" width="4" height="90" rx="2" fill="url(#eqSliderGrad)"/>
+      <circle cx="20" cy="40" r="10" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="20" y="152" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">16 kHz</text>
+      <text x="20" y="165" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">+3.0</text>
+    </g>
+  </g>
+</svg>
+

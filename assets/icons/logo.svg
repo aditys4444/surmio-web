@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="surmioLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background soft circle -->
+  <rect width="100" height="100" rx="28" fill="#12131F" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+  <!-- Ambient glow backdrop -->
+  <circle cx="50" cy="50" r="26" fill="url(#surmioLogoGrad)" opacity="0.25" filter="url(#glow)"/>
+  
+  <!-- Stylized Sound Waves forming an 'S' and Headphones / Frequency pulse -->
+  <path d="M 28 50 C 28 36, 40 24, 54 24 C 66 24, 74 32, 74 42 C 74 52, 64 56, 50 60 C 36 64, 26 70, 26 80 C 26 90, 38 98, 52 98 C 66 98, 76 88, 76 74" 
+        stroke="url(#surmioLogoGrad)" stroke-width="7" stroke-linecap="round" fill="none"/>
+  
+  <!-- Modern Equalizer Pulsing Dots & Bars -->
+  <line x1="38" y1="42" x2="38" y2="58" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" opacity="0.95"/>
+  <line x1="50" y1="32" x2="50" y2="68" stroke="url(#surmioLogoGrad)" stroke-width="5" stroke-linecap="round"/>
+  <line x1="62" y1="40" x2="62" y2="60" stroke="#06B6D4" stroke-width="4.5" stroke-linecap="round"/>
+</svg>
+

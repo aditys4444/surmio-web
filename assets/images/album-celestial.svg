@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="sunGlow" cx="60%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="35%" stop-color="#E11D48"/>
+      <stop offset="70%" stop-color="#4C0519"/>
+      <stop offset="100%" stop-color="#0F0307"/>
+    </radialGradient>
+    <linearGradient id="goldHorizon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="100%" stop-color="#FB923C"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#sunGlow)"/>
+  
+  <!-- Celestial rings -->
+  <ellipse cx="250" cy="220" rx="160" ry="50" fill="none" stroke="url(#goldHorizon)" stroke-width="3" transform="rotate(-15 250 220)"/>
+  <circle cx="250" cy="220" r="80" fill="#FFE4E6" opacity="0.95"/>
+  <circle cx="250" cy="220" r="76" fill="#F43F5E"/>
+  <ellipse cx="250" cy="220" rx="130" ry="38" fill="none" stroke="#FFF" stroke-width="1.5" stroke-dasharray="6 4" transform="rotate(-15 250 220)" opacity="0.6"/>
+
+  <!-- Badge -->
+  <rect x="40" y="40" width="75" height="24" rx="6" fill="rgba(251, 146, 60, 0.2)" stroke="#FB923C" stroke-width="1"/>
+  <text x="77" y="56" fill="#FDBA74" font-family="system-ui, sans-serif" font-size="10" font-weight="700" letter-spacing="1" text-anchor="middle">ALAC 24B</text>
+
+  <text x="250" y="415" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="22" font-weight="800" letter-spacing="3" text-anchor="middle">CELESTIAL DRIFT</text>
+  <text x="250" y="445" fill="#FDA4AF" font-family="system-ui, sans-serif" font-size="13" font-weight="600" letter-spacing="2" text-anchor="middle">SOLARIA &amp; THE ORBIT</text>
+</svg>
+
