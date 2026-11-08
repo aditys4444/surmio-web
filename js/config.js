@@ -82,7 +82,7 @@ Vote in the poll below to help shape the next update! Sleep timer, custom playli
       size: "7.7 MB",
       minOs: "Android 7.0 (Nougat) or newer",
       // Verified SHA256 of the actual build in downloads/Surmio-Music-v1.0.apk
-      sha256: "4f4d9ac05e5e357fd07edcca330e93c5770441548f79e12fd834cf8e15fa9e92",
+      sha256: "92eba0ab1e257570d745bc5bbc0bbff3b23c617e02f4bf6a60459cf9593465ca",
       primaryUrl: "downloads/Surmio-Music-v1.0.apk",
       fileName: "Surmio-Music-v1.0.apk",
       badge: "Direct APK Install (7.7 MB)",
